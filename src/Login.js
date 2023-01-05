@@ -8,7 +8,7 @@ export default class Login extends React.Component {
     }
     handleInput = (event) => {
         let name = event.target.name;
-        let value = event.target.value;
+        let value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
 
         this.setState(prev => {
             return { [name]: value }
